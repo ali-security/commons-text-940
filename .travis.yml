@@ -26,13 +26,9 @@ matrix:
   allow_failures:
     - jdk: openjdk-ea
 
-before_install:
-  - pwd
-  - ls
-  - name: remove empty.yml
-    run: rm -f /home/travis/build/ali-security/commons-text-940/.github/workflows/empty.yml
-    shell: bash
-
+before_script:
+  - rm -f .github/workflows/empty.yml
+    
 script:
   - mvn
 
