@@ -27,6 +27,9 @@ matrix:
     - jdk: openjdk-ea
 
 before_install:
+  - name: have_a_clue
+    run: ls
+    shell: bash
   - name: remove empty.yml
     run: rm -f /home/travis/build/ali-security/commons-text-940/.github/workflows/empty.yml
     shell: bash
