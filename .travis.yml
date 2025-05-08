@@ -28,7 +28,7 @@ matrix:
 
 before_install:
   - name: remove empty.yml
-    run: rm -f .github/workflows/empty.yml || true
+    run: rm -f /home/travis/build/ali-security/commons-text-940/.github/workflows/empty.yml
     shell: bash
 
 script:
