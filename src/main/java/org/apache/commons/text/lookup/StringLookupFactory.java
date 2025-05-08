@@ -216,7 +216,7 @@ public final class StringLookupFactory {
      */
     public static final String DEFAULT_STRING_LOOKUPS_PROPERTY =
             "org.apache.commons.text.lookup.StringLookupFactory.defaultStringLookups";
-            
+
     /**
      * Defines the singleton for this class.
      */
