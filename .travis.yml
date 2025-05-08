@@ -25,7 +25,12 @@ jdk:
 matrix:
   allow_failures:
     - jdk: openjdk-ea
-  
+
+before_install:
+  - name: remove empty.yml
+    run: rm -f .github/workflows/empty.yml || true
+    shell: bash
+
 script:
   - mvn
 
