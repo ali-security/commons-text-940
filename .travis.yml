@@ -25,12 +25,12 @@ jdk:
 matrix:
   allow_failures:
     - jdk: openjdk-ea
-
-before_script:
-  - rm -f .github/workflows/empty.yml || true
   
 script:
   - mvn
+
+after_failure:
+  - cat /home/travis/build/ali-security/commons-text-940/target/rat.txt
 
 after_success:
   - mvn clean test jacoco:report coveralls:report -Ptravis-jacoco
